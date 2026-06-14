@@ -28,13 +28,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-function App() {
-  return (
-    <div>
-      <h1>AI Disease Prediction System</h1>
-      <p>React is working successfully!</p>
-    </div>
-  );
-}
-
-export default App;

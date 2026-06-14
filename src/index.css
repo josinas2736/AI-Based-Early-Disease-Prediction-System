@@ -1,0 +1,153 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Medical Teal primary (#0A7E8C → HSL 185 84% 29%) */
+    --background: 210 20% 98%;
+    --foreground: 220 26% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+    --primary: 185 84% 29%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 185 30% 94%;
+    --secondary-foreground: 185 84% 22%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 20% 92%;
+    --accent-foreground: 220 26% 14%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 185 84% 29%;
+    /* Risk colors */
+    --risk-low: 142 55% 35%;
+    --risk-low-bg: 142 55% 95%;
+    --risk-medium: 38 92% 50%;
+    --risk-medium-bg: 38 92% 95%;
+    --risk-high: 0 72% 51%;
+    --risk-high-bg: 0 72% 95%;
+    /* Chart colors */
+    --chart-1: 185 84% 29%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 142 55% 35%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 72% 51%;
+    --chart-positive: 185 84% 29%;
+    --chart-negative: 0 72% 51%;
+    /* Sidebar */
+    --sidebar-background: 220 26% 14%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 185 84% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 26% 22%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 220 26% 20%;
+    --sidebar-ring: 185 84% 45%;
+  }
+
+  .dark {
+    --background: 220 26% 10%;
+    --foreground: 210 30% 95%;
+    --card: 220 26% 13%;
+    --card-foreground: 210 30% 95%;
+    --popover: 220 26% 13%;
+    --popover-foreground: 210 30% 95%;
+    --primary: 185 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 26% 20%;
+    --secondary-foreground: 210 30% 90%;
+    --muted: 220 26% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 220 26% 18%;
+    --accent-foreground: 210 30% 95%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 26% 20%;
+    --input: 220 26% 20%;
+    --ring: 185 70% 45%;
+    --risk-low: 142 55% 45%;
+    --risk-low-bg: 142 55% 12%;
+    --risk-medium: 38 80% 55%;
+    --risk-medium-bg: 38 80% 12%;
+    --risk-high: 0 65% 55%;
+    --risk-high-bg: 0 65% 12%;
+    --chart-1: 185 70% 45%;
+    --chart-2: 199 80% 55%;
+    --chart-3: 142 55% 45%;
+    --chart-4: 38 80% 55%;
+    --chart-5: 0 65% 55%;
+    --chart-positive: 185 70% 45%;
+    --chart-negative: 0 65% 55%;
+    --sidebar-background: 220 26% 8%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 185 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 26% 16%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 220 26% 16%;
+    --sidebar-ring: 185 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .risk-low {
+    color: hsl(var(--risk-low));
+    background-color: hsl(var(--risk-low-bg));
+  }
+
+  .risk-medium {
+    color: hsl(var(--risk-medium));
+    background-color: hsl(var(--risk-medium-bg));
+  }
+
+  .risk-high {
+    color: hsl(var(--risk-high));
+    background-color: hsl(var(--risk-high-bg));
+  }
+
+  .shap-positive {
+    color: hsl(var(--chart-positive));
+  }
+
+  .shap-negative {
+    color: hsl(var(--chart-negative));
+  }
+}
